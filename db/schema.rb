@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_26_130211) do
+ActiveRecord::Schema.define(version: 2018_05_26_151846) do
 
   create_table "foodposts", force: :cascade do |t|
     t.text "content"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2018_05_26_130211) do
     t.datetime "activated_at"
     t.string "reset_digest"
     t.datetime "reset_sent_at"
+    t.string "avatar"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

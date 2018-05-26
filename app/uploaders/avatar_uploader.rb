@@ -1,8 +1,8 @@
-class PictureUploader < CarrierWave::Uploader::Base
+class AvatarUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
-  process resize_to_limit: [400, 400]
+  process resize_to_fit: [100, 100]
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -22,7 +22,10 @@ class PictureUploader < CarrierWave::Uploader::Base
   #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
   # end
   
-
+  # デフォルト画像の設定
+  def default_url
+    "foodol_beginner.jpg"
+  end
 
   # Process files as they are uploaded:
   # process scale: [200, 300]
@@ -47,4 +50,6 @@ class PictureUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+  
+  
 end
