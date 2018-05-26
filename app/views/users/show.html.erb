@@ -6,4 +6,13 @@
       </h1>
     </section>
   </aside>
+  <div class="col-md-8">
+    <% if @user.foodposts.any? %>
+      <h3><%= @user.name %>さんの投稿一覧(<%= @user.foodposts.count %>)</h3>
+      <ol class="foodposts">
+        <%= render @foodposts %>
+      </ol>
+      <%= will_paginate @foodposts %>
+    <% end %>
+  </div>
 </div>

@@ -70,5 +70,16 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.authenticated?(:remember, '')
   end
   
+  test "associated foodposts should be destroyed" do
+    @user.save
+    @user.foodposts.create!(content: "checkin",
+                            protein: 50,
+                            fat: 5,
+                            carbohydrate: 2)
+    assert_difference 'Foodpost.count', -1 do
+      @user.destroy
+    end
+  end
+  
   
 end

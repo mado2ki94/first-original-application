@@ -1,0 +1,15 @@
+<li id="foodpost-<%= foodpost.id %>">
+    <span class="user"><%= link_to foodpost.user.name, foodpost.user %></span>
+    <span class="content">
+        <%= image_tag foodpost.picture.url if foodpost.picture? %>
+        <%= foodpost.protein * 4 + foodpost.fat * 9 + foodpost.carbohydrate * 4 %>kcal
+        （P:<%= foodpost.protein %> F:<%= foodpost.fat %> C:<%= foodpost.carbohydrate %>）<br>
+        <%= foodpost.content %>
+    </span>
+    <span class="timestamp"><%= time_ago_in_words(foodpost.created_at) %></span>
+    <% if current_user?(foodpost.user) %>
+      <%= link_to "編集", edit_foodpost_path(foodpost) %>
+      <%= link_to "delete", foodpost, method: :delete,
+                                       data: { confirm: "投稿を削除しますか?" } %>
+    <% end %>
+</li>

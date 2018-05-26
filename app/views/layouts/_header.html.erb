@@ -5,7 +5,9 @@
       <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "全投稿一覧", "#" %></li>
         <% if logged_in? %>
-          <li><%= link_to "マイページ", edit_user_path(current_user) %></li>
+          <li><%= link_to "マイページ", user_path(current_user) %></li>
+          <li><%= link_to "設定", edit_user_path(current_user) %></li>
+          <li><%= link_to "ログアウト", logout_path, method: :delete %></li>
         <% else %>
           <li><%= link_to "ログイン", "login" %></li>
           <li><%= link_to "会員登録", "signup" %></li>

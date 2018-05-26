@@ -1,0 +1,75 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+breakfast:
+  content: "egg and toast"
+  protein: 30
+  fat: 20
+  carbohydrate: 60
+  user: michael
+  created_at: <%= 10.minutes.ago %>
+
+lunch:
+  content: "lunchbox"
+  protein: 30
+  fat: 15
+  carbohydrate: 80
+  user: michael
+  created_at: <%= 3.years.ago %>
+  
+dinner:
+  content: "rice and beef"
+  protein: 50
+  fat: 10
+  carbohydrate: 90
+  user: michael
+  created_at: <%= 2.hours.ago %>
+  
+snack:
+  content: "protein"
+  protein: 30
+  fat: 2
+  carbohydrate: 3
+  user: michael
+  created_at: <%= Time.zone.now %>
+  
+<% 30.times do |n| %>
+foodpost_<%= n %>:
+  content: <%= Faker::Lorem.sentence(5) %>
+  protein: 50
+  fat: 10
+  carbohydrate: 70
+  created_at: <%= 42.days.ago %>
+  user: michael
+<% end %>
+
+food_1:
+  content: "sumple_food_1"
+  protein: 50
+  fat: 10
+  carbohydrate: 70
+  created_at: <%= 2.years.ago %>
+  user: archer
+
+food_2:
+  content: "sumple_food_2"
+  protein: 50
+  fat: 10
+  carbohydrate: 70
+  created_at: <%= 3.days.ago %>
+  user: archer
+
+food_3:
+  content: "sumple_food_3"
+  protein: 50
+  fat: 10
+  carbohydrate: 70
+  created_at: <%= 10.minutes.ago %>
+  user: lana
+
+food_4:
+  content: "sumple_food_4"
+  protein: 50
+  fat: 10
+  carbohydrate: 70
+  created_at: <%= 4.hours.ago %>
+  user: lana
