@@ -23,10 +23,17 @@ class FoodpostsController < ApplicationController
     end
   
     def edit
-        @foodpost = Foodpost.find_by(params[:id])
+        @foodpost = Foodpost.find(params[:id])
     end
 
     def update
+        @foodpost = Foodpost.find(params[:id])
+        if @foodpost.update_attributes(foodpost_params)
+          flash[:success] = "更新しました。"
+          redirect_to current_user
+        else
+          render 'edit'
+        end
     end
     
     def show
