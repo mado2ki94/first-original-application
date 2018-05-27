@@ -8,6 +8,7 @@ class Foodpost < ApplicationRecord
   validates :carbohydrate, presence: true
   validates :content, length: { maximum: 400 }
   validate  :picture_size
+  self.per_page = 10
   
   private
   

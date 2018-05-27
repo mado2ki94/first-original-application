@@ -1,5 +1,11 @@
-Hi <%= @user.name %>,
+<%= @user.name %>様、
 
-Welcome to the Foodol! Click on the link below to activate your account:
+Foodolへのご登録ありがとうございます。
+以下のリンクをクリックして登録を完了させて下さい。
+
 
 <%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
+
+
+※このメールアドレスは配信専用です。このメッセージに返信しないようお願いいたします。
+※このメールに心当たりのない場合は、このまま削除してください。

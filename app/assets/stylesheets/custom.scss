@@ -10,7 +10,8 @@
 /* universal */
 
 body {
-  padding-top: 60px;
+  margin-top: 100px;
+  background-color: #efefef;
 }
 
 section {
@@ -19,15 +20,47 @@ section {
 
 textarea {
   resize: vertical;
+  min-height: 150px;
 }
 
 .center {
+  margin-top: 30px;
   text-align: center;
+  height: 500px;
+  background-color: rgba(0,0,0,0.6)
 }
 
-.center h1 {
+.center img {
   margin-bottom: 10px;
+  padding-top: 100px;
+  padding-bottom: 30px;
 }
+
+.center a {
+  margin-top: 100px;
+}
+
+.top_page {
+  height: 500px;
+  background: url(/images/Foodol_toppage.jpg);
+  background-size: cover;
+}
+
+.col-md-6 img {
+  padding: 30px 0;
+}
+
+.col-md-6, .col-md-8 {
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.clear {
+  clear: left;
+}
+
+
 
 /* typography */
 
@@ -57,27 +90,35 @@ p {
 }
 
 /* header */
+header {
+  height: 80px;
+  line-height: 80px;
+}
+
+.navbar-nav {
+  font-size: 18px;
+}
+
+.navbar-right {
+  padding-top: 15px;
+}
+
+.navbar-inverse {
+  background-color: #001e43;
+}
 
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: -1px;
   padding-top: 9px;
-  font-weight: bold;
-  &:hover {
-    color: white;
-    text-decoration: none;
-  }
 }
 
 /* footer */
 
 footer {
+  height: 200px;
   margin-top: 45px;
-  padding-top: 5px;
+  padding-top: 45px;
   text-align: center;
   border-top: 1px solid #eaeaea;
   color: #777;
@@ -98,6 +139,13 @@ footer {
 aside {
   section.user_info {
     margin-top: 20px;
+    h1 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      img {
+        margin-right: 15px;
+      }
+    }
   }
   section {
     padding: 10px 0;
@@ -117,6 +165,9 @@ aside {
       letter-spacing: -1px;
       margin-bottom: 3px;
       margin-top: 0px;
+      img {
+        border-radius: 50px;
+      }
     }
   }
 }
@@ -146,6 +197,10 @@ aside {
 
 .users.follow {
   padding: 0;
+}
+
+.user_avatar {
+  border-radius: 50px;
 }
 
 
@@ -192,7 +247,49 @@ input {
   margin-left: 0;
 }
 
+.edit_user {
+  padding: 20px 10px;
+}
+
+.pfc_field {
+  width: 25%;
+}
+
 /* foodposts */
+
+.food_info {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.foodpost {
+  overflow: hidden;
+  padding-left: 20px;
+  .edit_or_delete_link {
+    margin: 0 5px;
+  }
+  .foodpost-left {
+    display: inline-block;
+    float: left;
+    width: 50%;
+  }
+  
+  .foodpost-right {
+    display: inline-block;
+    float: right;
+    width: 50%;
+    .foodpost-content {
+      margin-left: 0;
+      .foodpost-content-textarea {
+        resize: none;
+        outline: 0;
+        overflow: auto;
+        margin-top: 40px;
+      }
+    }
+  }
+}
 
 .foodposts {
   list-style: none;
@@ -203,8 +300,20 @@ input {
   }
   .user {
     margin-top: 5em;
+    padding-left: 20px;
     padding-top: 0;
   }
+  
+  .user_image {
+    margin-right: 20px;
+    border-radius: 17.5px;
+  }
+  
+  .user_name {
+    color: black;
+    font-size: 16px;
+  }
+  
   .content {
     display: block;
     margin-left: 60px;
@@ -215,7 +324,7 @@ input {
   }
   .timestamp {
     color: $gray-light;
-    display: block;
+    display: inline-block;
     margin-left: 60px;
   }
 }
@@ -232,4 +341,20 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+.form-padding {
+  padding: 40px 80px;
+}
+
+.set-padding-top {
+  padding-top: 20px;
+}
+
+.btn-follow {
+  margin-top: 20px;
+}
+
+.users li {
+  list-style-type: none;
 }

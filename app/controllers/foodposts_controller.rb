@@ -4,11 +4,14 @@ class FoodpostsController < ApplicationController
     
     def index
         @user = current_user
-        @foodposts = Foodpost.paginate(page: params[:page])
+        @foodposts = Foodpost.paginate(page: params[:page], per_page: 10)
     end
     
     def create
         @foodpost = current_user.foodposts.build(foodpost_params)
+        if @foodpost.content.length == 0
+            @foodpost.content = "コメントはありません。"
+        end
         if @foodpost.save
             flash[:success] = "投稿しました。"
             redirect_to root_url

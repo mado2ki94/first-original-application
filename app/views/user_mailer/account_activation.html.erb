@@ -1,10 +1,16 @@
 <h1>Foodol</h1>
 
-<p>Hi <%= @user.name %>,</p>
+<p><%= @user.name %>様、</p>
 
 <p>
-Welcome to the Foodol! Click on the link below to activate your account:
+Foodolへのご登録ありがとうございます。<br>
+以下のリンクをクリックして登録を完了させて下さい。
 </p>
 
-<%= link_to "Activate", edit_account_activation_url(@user.activation_token,
+<%= link_to "登録を完了する", edit_account_activation_url(@user.activation_token,
                                                     email: @user.email) %>
+
+<p>
+※このメールアドレスは配信専用です。このメッセージに返信しないようお願いいたします。<br>
+※このメールに心当たりのない場合は、このまま削除してください。
+</p>

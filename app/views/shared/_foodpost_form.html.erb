@@ -4,15 +4,15 @@
     <span class="picture">
       <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
     </span>
-    <%= f.label :protein, "タンパク質" %>
-    <%= f.number_field :protein %>
-    <%= f.label :fat, "脂質" %>
-    <%= f.number_field :fat %>
-    <%= f.label :carbohydrate, "炭水化物" %>
-    <%= f.number_field :carbohydrate %>
-    <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+    <%= f.label :protein, "タンパク質" %><br>
+    <%= f.number_field :protein, min: 0, max: 999, class: "pfc_field" %> g(1g = 4kcal)<br>
+    <%= f.label :fat, "脂質" %><br>
+    <%= f.number_field :fat, min: 0, max: 999, class: "pfc_field" %> g(1g = 9kcal)<br>
+    <%= f.label :carbohydrate, "炭水化物" %><br>
+    <%= f.number_field :carbohydrate, min: 0, max: 999, class: "pfc_field" %> g(1g = 4kcal)<br>
+    <%= f.text_area :content, placeholder: "コメント" %>
   </div>
-  <%= f.submit "投稿する", class: "btn btn-primary" %>
+  <%= f.submit "投稿する", class: "btn btn-success" %>
 <% end %>
 
 <script type="text/javascript">

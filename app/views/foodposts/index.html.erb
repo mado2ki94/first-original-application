@@ -1,17 +1,30 @@
 <div class="row">
   <aside class="col-md-4">
+    <% if logged_in? %>
     <section class="user_info">
       <h1>
-        <%= image_tag @user.avatar.url %>
+        <%= image_tag @user.avatar.url, size: 100 %>
         <%= @user.name %>
       </h1>
     </section>
     <section class="stats">
       <%= render 'shared/stats' %>
     </section>
+    <% else %>
+    <section>
+      <h2>アプリの説明タイトル</h2>
+      <h3>
+        アプリの説明アプリの説明アプリの説明アプリの説明アプリの説明
+      　アプリの説明アプリの説明アプリの説明アプリの説明アプリの説明
+      　アプリの説明アプリの説明アプリの説明アプリの説明アプリの説明
+      </h3>
+      <%= link_to "会員登録", signup_path, class: "btn btn-primary" %>
+      <p>登録済みの方は<%= link_to "こちらからログイン", login_path %></p>
+    </section>
+    <% end %>
   </aside>
   <div class="col-md-8">
-      <h3>全投稿一覧</h3>
+      <h3>　　全投稿一覧</h3>
       <ol class="foodposts">
         <%= render @foodposts %>
       </ol>

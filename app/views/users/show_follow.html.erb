@@ -1,9 +1,11 @@
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
-      <h1><%= @user.name %></h1>
-      <span><%= link_to "view my profile", @user %></span>
-      <span><b>Foodposts:</b> <%= @user.foodposts.count %></span>
+      <h1>
+        <%= image_tag current_user.avatar.url, size: 100, class: "user_avatar" %>
+        <%= @user.name %>
+      </h1>
+      <span>投稿数： <%= @user.foodposts.count %></span>
     </section>
     <section class="stats">
       <%= render 'shared/stats' %>

@@ -27,7 +27,7 @@ class FoodpostsInterfaceTest < ActionDispatch::IntegrationTest
     follow_redirect!
     assert_match content, response.body
     # 投稿を削除する
-    assert_select 'a', text: 'delete'
+    assert_select 'a', text: '削除'
     first_foodpost = @user.foodposts.paginate(page: 1).first
     assert_difference 'Foodpost.count', -1 do
       delete foodpost_path(first_foodpost)
