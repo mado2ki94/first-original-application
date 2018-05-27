@@ -1,0 +1,20 @@
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= image_tag @user.avatar.url %>
+        <%= @user.name %>
+      </h1>
+    </section>
+    <section class="stats">
+      <%= render 'shared/stats' %>
+    </section>
+  </aside>
+  <div class="col-md-8">
+      <h3>全投稿一覧</h3>
+      <ol class="foodposts">
+        <%= render @foodposts %>
+      </ol>
+      <%= will_paginate %>
+  </div>
+</div>

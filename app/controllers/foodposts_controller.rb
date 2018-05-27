@@ -3,6 +3,8 @@ class FoodpostsController < ApplicationController
     before_action :correct_user,   only: :destroy
     
     def index
+        @user = current_user
+        @foodposts = Foodpost.paginate(page: params[:page])
     end
     
     def create

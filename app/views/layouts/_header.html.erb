@@ -3,7 +3,7 @@
     <%= link_to "Foodol", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "全投稿一覧", "#" %></li>
+          <li><%= link_to "全投稿一覧", foodposts_path %></li>
         <% if logged_in? %>
           <li><%= link_to "マイページ", user_path(current_user) %></li>
           <li><%= link_to "設定", edit_user_path(current_user) %></li>
