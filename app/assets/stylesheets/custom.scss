@@ -362,3 +362,24 @@ span.picture {
 .users li {
   list-style-type: none;
 }
+
+.application-introduction {
+  font-size: 12px;
+  height: 450px;
+  background-color: white;
+  text-align: center;
+  h2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #001e43;
+    font-size: 32px;
+    font-weight: bold;
+  }
+  h3 {
+    margin: 12px 0;
+  }
+  .sign-up {
+    margin-top: 80px;
+    margin-bottom: 30px;
+  }
+}

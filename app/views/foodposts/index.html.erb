@@ -11,14 +11,12 @@
       <%= render 'shared/stats' %>
     </section>
     <% else %>
-    <section>
-      <h2>アプリの説明タイトル</h2>
-      <h3>
-        アプリの説明アプリの説明アプリの説明アプリの説明アプリの説明
-      　アプリの説明アプリの説明アプリの説明アプリの説明アプリの説明
-      　アプリの説明アプリの説明アプリの説明アプリの説明アプリの説明
-      </h3>
-      <%= link_to "会員登録", signup_path, class: "btn btn-primary" %>
+    <section class="application-introduction">
+      <h2>Foodolへようこそ</h2>
+      <h3>Foodolでは、</h3>
+      <h3>ボディメイクに欠かせない</h3>
+      <h3>食事のマクロ管理が可能です。</h3>
+      <%= link_to "会員登録", signup_path, class: "btn btn-primary sign-up" %>
       <p>登録済みの方は<%= link_to "こちらからログイン", login_path %></p>
     </section>
     <% end %>
