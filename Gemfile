@@ -5,6 +5,7 @@ ruby '2.4.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
+gem 'rails-i18n'
 gem 'bcrypt',         '3.1.11'
 gem 'faker',          '1.7.3'
 gem 'mail-iso-2022-jp'
